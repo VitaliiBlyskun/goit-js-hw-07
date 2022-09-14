@@ -44,6 +44,7 @@ function onClickPicture(event) {
   document.addEventListener("keydown", onClosePicture);
 
   function onClosePicture(event) {
+    document.removeEventListener("keydown", onClosePicture);
     if (event.code === "Escape") {
       instance.close();
     }
